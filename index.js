@@ -60,11 +60,15 @@ app.set('layout extractScripts', true);
 
 app.use('/', require('./routes/index')); // setting up routing file
 
+const PORT = process.env.PORT || 8000
+app.listen(PORT,()=>{
+    console.log(`Server running at port: ${PORT}`);
+})
 
-app.listen(PORT, (err) => {
+/*app.listen(PORT, (err) => {
     if (err) {
         console.log('Error while starting server: ', err);
     } else {
         console.log(`server is up and running at port ${PORT}`);
     }
-})
+})*/
